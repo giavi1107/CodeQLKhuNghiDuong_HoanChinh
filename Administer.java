@@ -407,7 +407,7 @@ public class Administer {
         {
             System.out.println("1. Thêm thông tin trong khu nghĩ dưỡng");
             System.out.println("2. Hiển thị danh sách trong khu nghĩ dưỡng");
-            System.out.println("3. Các thủ tục khi trả phòng ");
+            System.out.println("3. Các thủ tục khi trả và đặt phòng ");
             System.out.println("4. Hiển thị các loại tổng số");
             System.out.println("5. Hiển thị các khoảng chi tiêu");
             System.out.println("6. Thoát");
