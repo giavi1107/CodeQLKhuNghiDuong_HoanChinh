@@ -148,7 +148,7 @@ public class Administer {
     }
     
      // hàm cập cập trạng thái  có khách ở  ---> trống , xóa phần tử ở danh sách 
-    private void update_phong(int id)
+    private void update_phongTrong(int id)
     {
         // hiển thị tất cả các phòng 
         showDatPhong();
@@ -163,6 +163,35 @@ public class Administer {
                 else if(dp.getTrangThaiPhong()==TrangThaiPhong.Trong)
                 {
                     System.out.println("Phòng này đã trống !!!");
+                }
+                else
+                {
+                    System.out.println("Phòng đang vệ sinh , bảo trì ");
+                }
+            
+            }
+            else
+            {
+                System.out.println("Không tìm thấy phòng");
+            }
+        }
+    }
+    // hàm cập cập trạng thái  trống  ---> trống có khách ở
+    private void update_phongCoKhachO(int id)
+    {
+        // hiển thị tất cả các phòng 
+        showDatPhong();
+        for(DatPhong dp:listDatPhong)
+        {
+            if(dp.getId()==id)
+            {
+                if(dp.getTrangThaiPhong()==TrangThaiPhong.Trong)
+                {
+                    dp.setTrangThaiPhong(TrangThaiPhong.Co_Khach_O);
+                }
+                else if(dp.getTrangThaiPhong()==TrangThaiPhong.Co_Khach_O)
+                {
+                    System.out.println("Phòng này đã có khách ở !!!");
                 }
                 else
                 {
@@ -351,7 +380,8 @@ public class Administer {
         else if (choice ==3)
         {
             System.out.println("1. Xóa khách hàng");
-            System.out.println("2. Cập nhập phòng");
+            System.out.println("2. Cập nhập phòng trống -> có người");
+            System.out.println("3. Cập nhập phòng có người -> trống");
         }
         else if(choice==4){
             System.out.println("1. Tổng số nhân viên");
@@ -489,10 +519,13 @@ public class Administer {
                 }
                 else if(choice1==2)
                 {
-                //thay doi trang thai (dat phong --> trong) --> đưa phần tử đặt phòng  --> danh sách trống 
-//                    //cập nhật/xóa đặt phòng
-                    int id=Input.inputInt("Nhap ma phong  ban muon cap nhat");
-                    update_phong(id);
+                    int id=Input.inputInt("Nhap ma phong ban muon cap nhat");
+                    update_phongTrong(id);
+                }
+                else if(choice1==3)
+                {
+                    int id=Input.inputInt("Nhap ma phong ban muon cap nhat");
+                    update_phongCoKhachO(id);
                 }
                 break;  
             case 4 :
