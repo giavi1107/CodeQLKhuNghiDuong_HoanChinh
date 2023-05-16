@@ -151,7 +151,7 @@ public class Administer {
     private void update_phongTrong(int id)
     {
         // hiển thị tất cả các phòng 
-        showDatPhong();
+        //showDatPhong();
         for(DatPhong dp:listDatPhong)
         {
             if(dp.getId()==id)
@@ -180,7 +180,7 @@ public class Administer {
     private void update_phongCoKhachO(int id)
     {
         // hiển thị tất cả các phòng 
-        showDatPhong();
+        //showDatPhong();
         for(DatPhong dp:listDatPhong)
         {
             if(dp.getId()==id)
