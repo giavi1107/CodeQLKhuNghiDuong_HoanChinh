@@ -358,6 +358,7 @@ public class Administer {
      {
         if(choice==1)
         {
+            System.out.println("----------------------------");
             System.out.println("1. Thêm thông tin nhân viên");
             System.out.println("2. Thêm thông tin khách hàng");
             System.out.println("3. Thêm thông tin đặt phòng");
@@ -365,9 +366,11 @@ public class Administer {
             System.out.println("5. Thêm thông tin giấy phép");
             System.out.println("6. Thêm thông tin tiền thu");
             System.out.println("7. Thêm thông tin tiền chi");
+            System.out.println("----------------------------");
         }
         else if (choice ==2)
         {
+            System.out.println("----------------------------");
             System.out.println("1. Hiển thị danh sách nhân viên");
             System.out.println("2. Hiển thị danh sách khách hàng");
             System.out.println("3. Hiển thị danh sách đặt phòng");
@@ -376,27 +379,34 @@ public class Administer {
             System.out.println("6. Hiển thị danh sách giấy phép");
             System.out.println("7. Hiển thị danh sách tiền thu");
             System.out.println("8. Hiển thị danh sách tiền chi");
+            System.out.println("----------------------------");
         }
         else if (choice ==3)
         {
+            System.out.println("----------------------------");
             System.out.println("1. Xóa khách hàng");
-            System.out.println("2. Cập nhập phòng trống -> có người");
-            System.out.println("3. Cập nhập phòng có người -> trống");
+            System.out.println("2. Cập nhập phòng có người -> trống");
+            System.out.println("3. Cập nhập phòng trống -> có người");
+            System.out.println("----------------------------");
         }
         else if(choice==4){
+            System.out.println("----------------------------");
             System.out.println("1. Tổng số nhân viên");
             System.out.println("2. Tổng số khách hàng");
             System.out.println("3. Tổng số đặt phòng");
             System.out.println("4. Tổng số dịch vụ");
             System.out.println("5. Tổng số giấy phép");
+            System.out.println("----------------------------");
         }
         else if(choice==5){
+            System.out.println("----------------------------");
             System.out.println("1. Tổng số tiền lương nhân viên");
             System.out.println("2. Tổng số tiền có được từ đặt phòng");
             System.out.println("3. Tổng số tiền có được từ dịch vụ");
             System.out.println("4. Tổng số tiền thu");
             System.out.println("5. Tổng số tiền chi");
             System.out.println("6. Tổng số doanh thu");
+            System.out.println("----------------------------");
         }
          
      }
@@ -405,12 +415,14 @@ public class Administer {
     {
         while(true)
         {
+            System.out.println("--------Quản lý khu nghỉ dưỡng ------------");
             System.out.println("1. Thêm thông tin trong khu nghĩ dưỡng");
             System.out.println("2. Hiển thị danh sách trong khu nghĩ dưỡng");
             System.out.println("3. Các thủ tục khi trả và đặt phòng ");
             System.out.println("4. Hiển thị các loại tổng số");
             System.out.println("5. Hiển thị các khoảng chi tiêu");
             System.out.println("6. Thoát");
+            System.out.println("-------------------------------------------");
             int choice =Input.inputInt("Nhập lựa chọn: ");
             menu(choice);
         }
@@ -519,12 +531,12 @@ public class Administer {
                 }
                 else if(choice1==2)
                 {
-                    int id=Input.inputInt("Nhap ma phong ban muon cap nhat");
+                    int id=Input.inputInt("Nhập mã phòng bạn muốn cập nhật");
                     update_phongTrong(id);
                 }
                 else if(choice1==3)
                 {
-                    int id=Input.inputInt("Nhap ma phong ban muon cap nhat");
+                    int id=Input.inputInt("Nhập mã phòng bạn muốn cập nhật");
                     update_phongCoKhachO(id);
                 }
                 break;  
